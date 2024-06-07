@@ -1,0 +1,117 @@
+.grid-container {
+    display: grid;
+    gap: 0;
+    justify-items: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Default grid for larger screens */
+.grid-container {
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(100, 1fr);
+}
+
+/* Grid for large screens */
+@media (max-width: 1200px) {
+    .grid-container {
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(125, 1fr);
+    }
+}
+
+/* Grid for medium screens */
+@media (max-width: 992px) {
+    .grid-container {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(167, 1fr);
+    }
+}
+
+/* Grid for tablets */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(200, 1fr);
+    }
+}
+
+/* Grid for phones */
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(250, 1fr);
+    }
+}
+
+/* Grid for small phones */
+@media (max-width: 400px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(334, 1fr);
+    }
+}
+
+.birb-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.birb {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+
+.beak {
+    transform: translate(0px, -15px);
+}
+
+@keyframes circularMotion {
+    0% {
+        transform: translate(0px, -5px) rotate(0deg);
+    }
+
+    12.5% {
+        transform: translate(2.5px, -4.33px) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(5px, 0px) rotate(0deg);
+    }
+
+    37.5% {
+        transform: translate(2.5px, 4.33px) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(0px, 5px) rotate(0deg);
+    }
+
+    62.5% {
+        transform: translate(-2.5px, 4.33px) rotate(0deg);
+    }
+
+    75% {
+        transform: translate(-5px, 0px) rotate(0deg);
+    }
+
+    87.5% {
+        transform: translate(-2.5px, -4.33px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(0px, -5px) rotate(0deg);
+    }
+}
+
+.birb-head {
+    animation: circularMotion 2s linear infinite;
+    animation-play-state: paused;
+}
+
+/* Sc
