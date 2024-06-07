@@ -9,7 +9,7 @@
 
 /* Default grid for larger screens */
 .grid-container {
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(10, 1);
     grid-template-rows: repeat(100, 1fr);
 }
 
@@ -114,4 +114,18 @@
     animation-play-state: paused;
 }
 
-/* Sc
+.birb-wrapper:hover .birb-head {
+    animation-play-state: running;
+}
+
+/* Screen reader only */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
