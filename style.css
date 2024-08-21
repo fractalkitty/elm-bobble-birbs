@@ -14,7 +14,7 @@
 }
 
 /* Grid for large screens */
-@media (max-width: 1200px) {
+@media (max-width: 2000px) {
     .grid-container {
         grid-template-columns: repeat(8, 1fr);
         grid-template-rows: repeat(125, 1fr);
